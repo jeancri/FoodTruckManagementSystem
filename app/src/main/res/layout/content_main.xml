@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ca.mcgill.ecse321.foodtruckmanagementsystem.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout0"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/newmmenu_label"/>
+
+
+        <EditText
+            android:background="@drawable/border"
+            android:layout_width="66pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/newmenu_name"
+            android:hint="@string/newmenu_hint"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newmenu_button"
+            android:text="@string/newmenu_button"
+            android:onClick="addMenu"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/linearLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#d3d3d3"
+        android:id="@+id/view1" />
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/view1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/editmenu_label"/>
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="44pt"
+            android:background="@drawable/spinnerborder"
+            android:id="@+id/menuspinner"
+            android:hint="@string/menuspinner_hint"
+            android:layout_weight="1" />
+        <Button
+            android:layout_width="116dp"
+            android:layout_height="44dp"
+            android:id="@+id/removemenu_button"
+            android:text="@string/removemenu_button"
+            android:onClick="removeMenu"
+            android:layout_below="@+id/linearLayout0"
+            android:layout_centerHorizontal="true" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/newmmenuname_label"/>
+
+        <EditText
+            android:background="@drawable/border"
+            android:layout_width="83pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/editmenu_name"
+            android:hint="@string/newmenu_hint"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editmenu_button"
+            android:text="@string/editmenu_button"
+            android:onClick="editMenu"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/removeitem_label"/>
+
+        <EditText
+            android:background="@drawable/border"
+            android:layout_width="38pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/newitem_name"
+            android:hint="@string/newitemname_hint" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/newitemprice_label"/>
+
+        <EditText
+            android:background="@drawable/border"
+            android:digits="0123456789."
+            android:layout_width="33pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/newitem_price"
+            android:hint="@string/newitemprice_hint" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newitem_button"
+            android:text="@string/newitem_button"
+            android:onClick="addItem" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#d3d3d3"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/edititem_label"/>
+           <Spinner
+       android:background="@drawable/spinnerborder"
+       android:layout_height="wrap_content"
+       android:layout_width="71pt"
+       android:id="@+id/itemspinner"/>
+         <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/removeitem_button"
+     android:text="@string/removeitem_button"
+     android:onClick="removeItem" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/edititemname_label"/>
+        <EditText
+            android:background="@drawable/border"
+            android:layout_width="30pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/edititem_name"
+            android:hint="@string/edititemname_hint"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/edititemprice_label"/>
+        <EditText
+            android:digits="0123456789."
+            android:background="@drawable/border"
+            android:layout_width="20pt"
+            android:layout_height="wrap_content"
+            android:id="@+id/edititem_price"
+            android:hint="@string/edititemprice_hint"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edititem_button"
+            android:text="@string/edititem_button"
+            android:onClick="updateItem" />
+    </LinearLayout>
+
+
+
+    <GridView
+        android:layout_below="@+id/linearLayout6"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="1px"
+        android:horizontalSpacing="1px"
+        android:background="#ffffff"
+        android:columnWidth="75dp"
+        android:layout_margin="25dp"
+        >
+        <!--content will be generate programmatically-->
+    </GridView>
+
+
+
+
+
+
+     <LinearLayout
+        android:layout_below="@+id/linearLayout5"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="88pt"
+            android:text="@string/gridviewname_label"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/gridviewprice_label"/>
+
+     </LinearLayout>
+</RelativeLayout>

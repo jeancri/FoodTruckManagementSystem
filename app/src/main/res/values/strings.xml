@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FoodTruckManagementSystem</string>
+    <string name="action_settings">Settings</string>
+    <string name="newmmenu_label">New menu name:</string>
+    <string name="newmenu_hint" />
+    <string name="newmenu_button">Add menu</string>
+    <string name="editmenu_label">Edit menu:</string>
+    <string name="editmenu_button">Edit menu</string>
+    <string name="newmitemname_label">Item name:</string>
+    <string name="newitemname_hint" />
+    <string name="newmitemprice_label">Price:</string>
+    <string name="newitemprice_hint" />
+    <string name="newitem_button">Add item</string>
+    <string name="removeitem_label">Item name:</string>
+    <string name="removeitem_button">Remove item</string>
+    <string name="removemenu_button">Delete menu</string>
+    <string name="newmmenuname_label">New name:</string>
+    <string name="edititemname_label">New name:</string>
+    <string name="edititem_hint" />
+    <string name="edititemprice_label">New price:</string>
+    <string name="edititemname_hint" />
+    <string name="edititemprice_hint" />
+    <string name="edititem_button">Update</string>
+    <string name="menuspinner_hint">Enter a new menu</string>
+    <string name="gridviewname_label">Items:</string>
+    <string name="gridviewprice_label">Prices:</string>
+    <string name="newitemprice_label">Price:</string>
+    <string name="newitemname_label">Name:</string>
+    <string name="edititem_label">Edit item:</string>
+</resources>
